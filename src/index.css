@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: rgb(27, 27, 27);
+}
+
+.card {
+  background: white;
+  width: 270px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-image {
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+
+}
+
+.car-1{
+  background-image: url('https://cdn.britannica.com/q:60/53/212553-050-E4A98496/Baseball-bat.jpg')
+}
+
+.car-2{
+  background-image: url('https://lakelandmom.com/wp-content/uploads/2021/01/Baseball-Teams-Lakeland-Florida.jpg')
+}
+
+.car-3{
+  background-image: url('https://www.gannett-cdn.com/presto/2020/06/01/USAT/9a8b11f3-be81-43c6-b5ec-58f5dbc03430-AP_Virus_Outbreak_MLB_Baseball.jpg?crop=2774,1560,x33,y154&width=2774&height=1560&format=pjpg&auto=webp')
+}
