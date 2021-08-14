@@ -1,7 +1,6 @@
 function PlayerCard({ player }) {
   return (
     <div>
-
       <p>Hello {player.name}</p>
       <p>{player.home_run} home runs</p>
     </div>
