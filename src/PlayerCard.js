@@ -1,51 +1,25 @@
+import React from "react";
+import { Card, Button } from "react-bootstrap";
+
 function PlayerCard({ player }) {
   return (
-    <div>
-      <body>
-
-        <section class="container">
-
-          <div class="card">
-            <div class="card-image car-1">
-              <h1>{player.name}</h1>
-              <h2>{player.team_name}</h2>
-              <p>{player.home_run} home runs</p>
-              <p>{player.rbi} runs batted in</p>
-              <p>{player.avg} batting average</p>
-              <p>{player.era} ERA</p>
-              <p>{player.whip} WHIP</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image car-2">
-              <h1>{player.name}</h1>
-              <h2>{player.team_name}</h2>
-              <p>{player.home_run} home runs</p>
-              <p>{player.rbi} runs batted in</p>
-              <p>{player.avg} batting average</p>
-              <p>{player.era} ERA</p>
-              <p>{player.whip} WHIP</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image car-3">
-              <h1>{player.name}</h1>
-              <h2>{player.team_name}</h2>
-              <p>{player.home_run} home runs</p>
-              <p>{player.rbi} runs batted in</p>
-              <p>{player.avg} batting average</p>
-              <p>{player.era} ERA</p>
-              <p>{player.whip} WHIP</p>
-            </div>
-          </div>
-
-        </section>
-
-      </body>
-
-    </div>
+    <>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>{player.name}</Card.Title>
+          <Card.Text>
+            <h2>{player.team_name}</h2>
+            <p>{player.home_run} home runs</p>
+            <p>{player.rbi} runs batted in</p>
+            <p>{player.avg} batting average</p>
+            <p>{player.era} ERA</p>
+            <p>{player.whip} WHIP</p>
+          </Card.Text>
+          <Button variant="primary">Details</Button>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 export default PlayerCard;

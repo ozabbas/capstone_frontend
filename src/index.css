@@ -1,5 +1,6 @@
-body {
+/* body {
   margin: 0;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -44,12 +45,4 @@ body{
 
 .car-1{
   background-image: url('https://cdn.britannica.com/q:60/53/212553-050-E4A98496/Baseball-bat.jpg')
-}
-
-.car-2{
-  background-image: url('https://lakelandmom.com/wp-content/uploads/2021/01/Baseball-Teams-Lakeland-Florida.jpg')
-}
-
-.car-3{
-  background-image: url('https://www.gannett-cdn.com/presto/2020/06/01/USAT/9a8b11f3-be81-43c6-b5ec-58f5dbc03430-AP_Virus_Outbreak_MLB_Baseball.jpg?crop=2774,1560,x33,y154&width=2774&height=1560&format=pjpg&auto=webp')
-}
+} */
