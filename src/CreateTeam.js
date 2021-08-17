@@ -1,13 +1,13 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 function CreateTeam() {
   const [players, setPlayers] = useState([])
   const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:3001/players")
+    fetch("http://localhost:3000/players")
       .then(response => response.json())
       .then(json => setPlayers(json))
   }, []);

@@ -5,11 +5,11 @@ function PlayerCard({ player }) {
   return (
     <>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src="/capstone_front/public/images.jpeg/mickeymantle.jpeg" />
         <Card.Body>
           <Card.Title>{player.name}</Card.Title>
           <Card.Text>
-            <h2>{player.team_name}</h2>
+            <p>{player.team_name}</p>
             <p>{player.home_run} home runs</p>
             <p>{player.rbi} runs batted in</p>
             <p>{player.avg} batting average</p>
