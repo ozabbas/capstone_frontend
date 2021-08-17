@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-function PlayerCard({ player }) {
+function PlayerCard({ player, addOrRemovePlayer, addOrRemove }) {
   return (
     <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="/capstone_front/public/images.jpeg/mickeymantle.jpeg" />
+      <Card style={{ width: '14rem' }}>
+        {/* <Card.Img variant="top" src="/images/mickeymantle.jpeg" /> */}
         <Card.Body>
           <Card.Title>{player.name}</Card.Title>
           <Card.Text>
@@ -16,7 +16,12 @@ function PlayerCard({ player }) {
             <p>{player.era} ERA</p>
             <p>{player.whip} WHIP</p>
           </Card.Text>
-          <Button variant="primary">Details</Button>
+          <Button
+            variant="primary"
+            onClick={() => addOrRemovePlayer(player)} >
+            {addOrRemove ? "Add" : "Remove"}
+          </Button>
+
         </Card.Body>
       </Card>
     </>

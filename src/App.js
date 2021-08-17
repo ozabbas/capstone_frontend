@@ -32,17 +32,19 @@ function App() {
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/betting-odds">
-            <BettingOdds />
-          </Route>
-          <Route path="/create-team">
-            <CreateTeam />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Container>
+          <Switch>
+            <Route path="/betting-odds">
+              <BettingOdds />
+            </Route>
+            <Route path="/create-team">
+              <CreateTeam />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Container>
       </div>
     </Router>
 
