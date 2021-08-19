@@ -26,6 +26,7 @@ function App() {
               <LinkContainer to="/home"><Nav.Link>Home</Nav.Link></LinkContainer>
               <LinkContainer to="/betting-odds"><Nav.Link>Betting Odds</Nav.Link></LinkContainer>
               <LinkContainer to="/create-team"><Nav.Link>Create Team</Nav.Link></LinkContainer>
+              <LinkContainer to="/Login"><Nav.Link>Login</Nav.Link></LinkContainer>
             </Nav>
           </Container>
         </Navbar>

@@ -10,11 +10,7 @@ function PlayerCard({ player, addOrRemovePlayer, addOrRemove }) {
           <Card.Title>{player.name}</Card.Title>
           <Card.Text>
             <p>{player.team_name}</p>
-            <p>{player.home_run} home runs</p>
-            <p>{player.rbi} runs batted in</p>
-            <p>{player.avg} batting average</p>
-            <p>{player.era} ERA</p>
-            <p>{player.whip} WHIP</p>
+            <p>Position: {player.position}</p>
           </Card.Text>
           <Button
             variant="primary"

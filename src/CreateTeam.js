@@ -35,19 +35,19 @@ function CreateTeam() {
     <>
       <Row>
         <Col xs={12}>
-          <h1>Create Team</h1>
+          <h1>Create your own fantasy baseball team here!</h1>
         </Col>
       </Row>
 
-      <Row xs={12}>
+      {/* <Row xs={12}>
         <h3>#1 Team</h3>
-      </Row>
+      </Row> */}
 
       <Row xs={1} md={4} className="g-4">
         {teamPlayers.map(player => { return <Col><PlayerCard player={player} addOrRemove={false} addOrRemovePlayer={removePlayer} /></Col> })}
       </Row>
 
-      <h2>Players</h2>
+      <h2>#1 Team</h2>
 
       <Row xs={12}>
         <Form onSubmit={handleSubmit}>

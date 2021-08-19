@@ -14,14 +14,8 @@ code {
     monospace;
 }
 
-
-
 .card {
-  background: rgb(86, 133, 187);
+  background: rgb(214, 93, 89);
 
   border-radius: 15px;
-}
-
-.car-1{
-  background-image: url('https://www.gannett-cdn.com/-mm-/2405fadd144cc28d25162d7f78c59abb8dbf1bcb/c=0-44-949-1309/local/-/media/2018/04/20/USATODAY/USATODAY/636598335974438040-IA01-1952-MANTLE-TOPPS-1297337.JPG?quality=50&width=640')
 }
