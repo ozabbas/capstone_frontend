@@ -1,12 +1,14 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col, Form, Button } from 'react-bootstrap';
 
 function CreateTeam() {
   const [players, setPlayers] = useState([])
   const [teamPlayers, setTeamPlayers] = useState([])
-  const [searchInput, setSearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState("");
+
+  const email = localStorage.getItem('email')
 
   // fetch all players from backend
   useEffect(() => {
@@ -21,7 +23,7 @@ function CreateTeam() {
   }
 
   const removePlayer = (playerToRemove) => {
-    setTeamPlayers(teamPlayers.filter(player => player.name != playerToRemove.name));
+    setTeamPlayers(teamPlayers.filter(player => player.name !== playerToRemove.name));
   }
 
   // handle search submit
@@ -39,9 +41,6 @@ function CreateTeam() {
         </Col>
       </Row>
 
-      {/* <Row xs={12}>
-        <h3>#1 Team</h3>
-      </Row> */}
 
       <Row xs={1} md={4} className="g-4">
         {teamPlayers.map(player => { return <Col><PlayerCard player={player} addOrRemove={false} addOrRemovePlayer={removePlayer} /></Col> })}

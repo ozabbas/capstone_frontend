@@ -6,6 +6,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Home from './Home.js';
 import BettingOdds from './BettingOdds.js';
 import CreateTeam from './CreateTeam.js';
+import Login from './Login.js';
+import Signup from './Signup.js';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
@@ -26,7 +28,7 @@ function App() {
               <LinkContainer to="/home"><Nav.Link>Home</Nav.Link></LinkContainer>
               <LinkContainer to="/betting-odds"><Nav.Link>Betting Odds</Nav.Link></LinkContainer>
               <LinkContainer to="/create-team"><Nav.Link>Create Team</Nav.Link></LinkContainer>
-              <LinkContainer to="/Login"><Nav.Link>Login</Nav.Link></LinkContainer>
+              <LinkContainer to="/login"><Nav.Link>Login</Nav.Link></LinkContainer>
             </Nav>
           </Container>
         </Navbar>
@@ -40,6 +42,12 @@ function App() {
             </Route>
             <Route path="/create-team">
               <CreateTeam />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Signup />
             </Route>
             <Route path="/">
               <Home />
