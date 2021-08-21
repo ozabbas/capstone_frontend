@@ -2,13 +2,17 @@ import React from 'react';
 import PlayerCard from './PlayerCard';
 import { useState, useEffect } from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 function CreateTeam() {
+  const history = useHistory();
+
   const [players, setPlayers] = useState([])
   const [teamPlayers, setTeamPlayers] = useState([])
   const [searchInput, setSearchInput] = useState("");
 
-  const email = localStorage.getItem('email')
+  const email = localStorage.getItem('email');
+  const userID = localStorage.getItem('userID');
 
   // fetch all players from backend
   useEffect(() => {
@@ -33,6 +37,35 @@ function CreateTeam() {
     setPlayers(filteredPlayers)
   }
 
+  const handleCreateTeam = (event) => {
+    event.preventDefault();
+
+    const playerIDs = teamPlayers.map(player => player.id);
+
+    fetch("/teams", {
+      method: "POST",
+      headers: {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify({
+        name: `${email} team`,
+        user_id: userID,
+        player_ids: playerIDs
+      })
+    })
+      .then(resp => {
+        if (!resp.ok) {
+          // error
+          console.log(resp);
+        } else {
+          // success - created team
+          // redirect to My Team
+          history.push('/my-team')
+        }
+      });
+  }
+
   return (
     <>
       <Row>
@@ -41,12 +74,23 @@ function CreateTeam() {
         </Col>
       </Row>
 
-
-      <Row xs={1} md={4} className="g-4">
-        {teamPlayers.map(player => { return <Col><PlayerCard player={player} addOrRemove={false} addOrRemovePlayer={removePlayer} /></Col> })}
-      </Row>
-
       <h2>#1 Team</h2>
+
+      {teamPlayers.length > 0 && (
+        <>
+          <Row xs={1} md={4} className="g-4">
+            {teamPlayers.map(player => { return <Col><PlayerCard player={player} addOrRemove={false} addOrRemovePlayer={removePlayer} /></Col> })}
+          </Row>
+          <Row xs={12}>
+            <Col xs={12} md={4}>
+              <Button onClick={handleCreateTeam}>
+                Create Team
+              </Button>
+            </Col>
+          </Row>
+        </>
+      )}
+
 
       <Row xs={12}>
         <Form onSubmit={handleSubmit}>

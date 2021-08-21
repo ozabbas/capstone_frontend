@@ -8,6 +8,8 @@ import BettingOdds from './BettingOdds.js';
 import CreateTeam from './CreateTeam.js';
 import Login from './Login.js';
 import Signup from './Signup.js';
+import MyTeam from './MyTeam.js';
+
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
@@ -29,6 +31,7 @@ function App() {
               <LinkContainer to="/betting-odds"><Nav.Link>Betting Odds</Nav.Link></LinkContainer>
               <LinkContainer to="/create-team"><Nav.Link>Create Team</Nav.Link></LinkContainer>
               <LinkContainer to="/login"><Nav.Link>Login</Nav.Link></LinkContainer>
+              <LinkContainer to="/my-team"><Nav.Link>My Team</Nav.Link></LinkContainer>
             </Nav>
           </Container>
         </Navbar>
@@ -48,6 +51,9 @@ function App() {
             </Route>
             <Route path="/signup">
               <Signup />
+            </Route>
+            <Route path="/my-team">
+              <MyTeam />
             </Route>
             <Route path="/">
               <Home />

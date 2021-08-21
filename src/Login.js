@@ -28,10 +28,14 @@ function Login() {
           // error: ex. password is incorrect
           console.log(resp);
         } else {
-          // store email
-          localStorage.setItem('email', email)
-          // redirect to home
-          history.push('/home')
+          // parse json response
+          resp.json().then((json) => {
+            // store email, userID
+            localStorage.setItem('email', email);
+            localStorage.setItem('userID', json.user_id);
+            // redirect to home
+            history.push('/home');
+          });
         }
       })
   }
