@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-function PlayerCard({ player, addOrRemovePlayer, addOrRemove }) {
+function PlayerCard({ player, buttonOnClick, buttonText }) {
   return (
     <>
       <Card style={{ width: '14rem' }}>
@@ -12,11 +12,13 @@ function PlayerCard({ player, addOrRemovePlayer, addOrRemove }) {
             <p>{player.team_name}</p>
             <p>Position: {player.position}</p>
           </Card.Text>
-          <Button
-            variant="primary"
-            onClick={() => addOrRemovePlayer(player)} >
-            {addOrRemove ? "Add" : "Remove"}
-          </Button>
+          {buttonText && (
+            <Button
+              variant="primary"
+              onClick={() => buttonOnClick(player)} >
+              {buttonText}
+            </Button>
+          )}
 
         </Card.Body>
       </Card>

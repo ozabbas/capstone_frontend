@@ -11,12 +11,11 @@ function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(email, password, passwordConfirmation);
     fetch("/users",
       {
         method: "POST",
         headers: {
-          "Accept": 'application/json',
           "Content-Type": 'application/json'
         },
         body: JSON.stringify({
@@ -40,7 +39,7 @@ function Signup() {
   return (
     <>
       <h1>Sign up</h1>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -72,7 +71,6 @@ function Signup() {
         </Form.Group>
 
         <Button
-          onClick={handleSubmit}
           className="me-2"
           variant="primary"
           type="submit">

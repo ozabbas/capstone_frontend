@@ -79,7 +79,7 @@ function CreateTeam() {
       {teamPlayers.length > 0 && (
         <>
           <Row xs={1} md={4} className="g-4">
-            {teamPlayers.map(player => { return <Col><PlayerCard player={player} addOrRemove={false} addOrRemovePlayer={removePlayer} /></Col> })}
+            {teamPlayers.map(player => { return <Col><PlayerCard player={player} buttonText={"Remove"} buttonOnClick={removePlayer} /></Col> })}
           </Row>
           <Row xs={12}>
             <Col xs={12} md={4}>
@@ -103,7 +103,7 @@ function CreateTeam() {
       </Row>
 
       <Row xs={1} md={4} className="g-4">
-        {players.map(player => <Col><PlayerCard addOrRemovePlayer={addPlayer} addOrRemove={true} player={player} /></Col>)}
+        {players.map(player => <Col><PlayerCard buttonOnClick={addPlayer} buttonText={"Add"} player={player} /></Col>)}
       </Row>
 
     </>

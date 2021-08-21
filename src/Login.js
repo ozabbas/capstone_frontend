@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
-function Login() {
+function Login(props) {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,15 +28,15 @@ function Login() {
           // error: ex. password is incorrect
           console.log(resp);
         } else {
-          // parse json response
-          resp.json().then((json) => {
-            // store email, userID
-            localStorage.setItem('email', email);
-            localStorage.setItem('userID', json.user_id);
-            // redirect to home
-            history.push('/home');
-          });
+          return resp.json()
         }
+      })
+      .then(data => {
+        console.log('data in login', data);
+        localStorage.setItem('jwt', data.jwt)
+        props.setUser(data.id);
+        // redirect to home
+        history.push('/home')
       })
   }
 
