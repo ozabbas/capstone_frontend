@@ -12,6 +12,7 @@ function Home() {
 
   return (
     <div className="d-flex container">
+
       <div
         className={`panel ${activePanel === 1 ? 'active' : ''}`}
         onClick={() => togglePanel(1)} >

@@ -62,8 +62,8 @@ function App() {
   return (
 
 
-    <div>
 
+    <div>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Major League Stats</Navbar.Brand>

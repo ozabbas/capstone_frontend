@@ -6,7 +6,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(138, 133, 132, 0.61);
+  /* background: rgba(138, 133, 132, 0.61); */
+  background-image: url('https://images.unsplash.com/photo-1595453926401-9e478c1b6184?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGJhc2ViYWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 code {
@@ -15,71 +19,8 @@ code {
 }
 
 .card {
-  background: rgb(214, 93, 89);
+  background: rgb(193, 194, 197);
+  
 
   border-radius: 15px;
 }
-
-/* @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-{
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  width: 90vw;
-}
-
-.panel {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  -webkit-transition: all 700ms ease-in;
-}
-
-.panel h3 {
-  font-size: 24px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-  opacity: 0;
-}
-
-.panel.active {
-  flex: 5;
-}
-
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
-} */

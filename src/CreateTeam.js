@@ -74,7 +74,7 @@ function CreateTeam() {
         </Col>
       </Row>
 
-      <h2>#1 Team</h2>
+      {/* <h2>#1 Team</h2> */}
 
       {teamPlayers.length > 0 && (
         <>
