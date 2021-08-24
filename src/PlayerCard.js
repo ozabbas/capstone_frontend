@@ -12,13 +12,13 @@ function PlayerCard({ player, buttonOnClick, buttonText }) {
           <Card.Text>
             <p className="statsText">{player.team_name}</p>
             <p className="statsText">Position: {player.position}</p>
-            <p className="statsText">AB: {player.at_bats}</p>
-            <p className="statsText">R: {player.runs}</p>
-            <p className="statsText">H: {player.hits}</p>
-            <p className="statsText">HR:{player.home_runs}</p>
+            <p className="statsText">AB: {player.ab}</p>
+            <p className="statsText">R: {player.r}</p>
+            <p className="statsText">H: {player.h}</p>
+            <p className="statsText">HR:{player.r}</p>
             <p className="statsText">RBI: {player.rbi}</p>
-            <p className="statsText">SB: {player.stolen_bases}</p>
-            <p className="statsText">AVG: {player.average}</p>
+            <p className="statsText">SB: {player.sb}</p>
+            <p className="statsText">AVG: {player.avg}</p>
             <p className="statsText">OBP: {player.obp}</p>
             <p className="statsText">WPCT: {player.wpct}</p>
             <p className="statsText">ERA: {player.era}</p>

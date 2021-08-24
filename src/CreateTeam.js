@@ -8,6 +8,7 @@ function CreateTeam() {
   const history = useHistory();
 
   const [players, setPlayers] = useState([])
+  const [displayPlayers, setDisplayPlayers] = useState([]);
   const [teamPlayers, setTeamPlayers] = useState([])
   const [searchInput, setSearchInput] = useState("");
 
@@ -16,9 +17,12 @@ function CreateTeam() {
 
   // fetch all players from backend
   useEffect(() => {
-    fetch("http://localhost:3000/players")
+    fetch("http://localhost:3001/players")
       .then(response => response.json())
-      .then(json => setPlayers(json))
+      .then(json => {
+        setPlayers(json);
+        setDisplayPlayers(json);
+      })
   }, []);
 
   // add player to team
@@ -34,7 +38,7 @@ function CreateTeam() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const filteredPlayers = players.filter(player => player.name.toLowerCase().includes(searchInput.toLowerCase()))
-    setPlayers(filteredPlayers)
+    setDisplayPlayers(filteredPlayers)
   }
 
   const handleCreateTeam = (event) => {
@@ -70,7 +74,7 @@ function CreateTeam() {
     <>
       <Row>
         <Col xs={12}>
-          <h1>Create your own fantasy baseball team here!</h1>
+          <h1>Create your own baseball team here!</h1>
         </Col>
       </Row>
 
@@ -103,7 +107,7 @@ function CreateTeam() {
       </Row>
 
       <Row xs={1} md={4} className="g-4">
-        {players.map(player => <Col><PlayerCard buttonOnClick={addPlayer} buttonText={"Add"} player={player} /></Col>)}
+        {displayPlayers.map(player => <Col><PlayerCard buttonOnClick={addPlayer} buttonText={"Add"} player={player} /></Col>)}
       </Row>
 
     </>

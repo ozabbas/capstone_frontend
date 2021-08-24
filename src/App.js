@@ -9,6 +9,7 @@ import CreateTeam from './CreateTeam.js';
 import Login from './Login.js';
 import Signup from './Signup.js';
 import MyTeam from './MyTeam.js';
+// import Scores from './Scores.js';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
@@ -31,7 +32,7 @@ function App() {
     if (!token) {
       history.push('/login');
     } else {
-      fetch('http://localhost:3000/sessions/user_authenticate', {
+      fetch('http://localhost:3001/sessions/user_authenticate', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `${token}`
